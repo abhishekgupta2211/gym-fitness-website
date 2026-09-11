@@ -17,3 +17,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: js(timetable): add morning vs evening class filter option -->
 
 <!-- Update: js(cart): add promo code validation feature with 10% discount -->
+
+<!-- Update: js(cart): persist shopping cart contents in localStorage -->
