@@ -59,3 +59,5 @@ A premium, modern, fully responsive web application.
 <!-- GitHub Badge Boost Iteration 1 -->
 
 <!-- GitHub Badge Boost Iteration 2 -->
+
+<!-- GitHub Badge Boost Iteration 3 -->
