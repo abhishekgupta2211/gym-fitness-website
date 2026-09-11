@@ -25,3 +25,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: style(store): add hover scale animation for merchandise images -->
 
 <!-- Update: style(pricing): add shadow glow effect for popular plan card -->
+
+<!-- Update: style(trainers): add social link overlay transitions on hover -->
