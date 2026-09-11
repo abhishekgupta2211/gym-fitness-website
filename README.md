@@ -19,3 +19,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: js(cart): add promo code validation feature with 10% discount -->
 
 <!-- Update: js(cart): persist shopping cart contents in localStorage -->
+
+<!-- Update: js(theme): auto-detect system dark mode user preference -->
