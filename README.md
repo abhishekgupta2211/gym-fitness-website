@@ -51,3 +51,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: perf(images): set lazy loading on secondary section images -->
 
 <!-- Update: fix(contact): add basic email regex validation before form submission -->
+
+<!-- Update: fix(timetable): handle empty schedule state gracefully -->
