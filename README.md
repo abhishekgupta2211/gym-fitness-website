@@ -37,3 +37,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: html(manifest): add web application manifest for PWA installation -->
 
 <!-- Update: test(bmi): add unit assertions for underweight and overweight calculations -->
+
+<!-- Update: test(cart): add cart item addition and subtotal calculation unit test -->
