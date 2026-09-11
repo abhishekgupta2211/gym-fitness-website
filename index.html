@@ -810,11 +810,198 @@ footer {
   font-size: 0.9rem;
 }
 
+
+/* Additional Next-Gen Features Styling */
+.badge-neon {
+  background: rgba(0, 230, 118, 0.15);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Before/After Transformation Slider */
+.transformation-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 2px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.img-comp-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.img-comp-img img {
+  width: 800px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.img-comp-overlay {
+  width: 50%;
+  z-index: 2;
+  border-right: 3px solid var(--primary);
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  opacity: 0.9;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 900;
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Live Activity Ticker */
+.live-activity-ticker {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  background: rgba(18, 20, 26, 0.95);
+  border-left: 4px solid var(--secondary);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(10px);
+  animation: slideInTicker 0.5s ease-out;
+}
+
+@keyframes slideInTicker {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Floating Motivation Music Player Widget */
+.music-player-widget {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--bg-card);
+  border: 1px solid var(--primary);
+  padding: 10px 18px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 998;
+  box-shadow: 0 8px 20px var(--primary-glow);
+  cursor: pointer;
+}
+
+.music-player-widget button {
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Workout Plan Generator Box */
+.plan-generator-box {
+  background: var(--bg-card);
+  padding: 35px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  margin-top: 40px;
+}
+
+.routine-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.routine-table th, .routine-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.routine-table th {
+  color: var(--primary);
+  background: rgba(255, 94, 21, 0.05);
+}
+
+/* Modal Windows */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1002;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--bg-card);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 35px;
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
   </style>
 </head>
 <body>
 
-  <!-- Announcement Bar -->
+  <!-- Notice Bar -->
   <div class="notice-bar">
     🔥 LIMITED TIME: Join today & get 1 Month Free Personal Training + Free Protein Shaker!
   </div>
@@ -827,20 +1014,21 @@ footer {
         <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#programs">Programs</a></li>
+        <li><a href="#transformations">Transformations</a></li>
+        <li><a href="#generator">Plan Generator</a></li>
         <li><a href="#calculators">Tools</a></li>
         <li><a href="#timetable">Timetable</a></li>
         <li><a href="#pricing">Plans</a></li>
-        <li><a href="#trainers">Trainers</a></li>
         <li><a href="#store">Store</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">🌙</button>
+        <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Light/Dark Theme">🌙</button>
         <button class="cart-icon-btn" onclick="toggleCartDrawer()" title="Shopping Cart">
           🛒 <span class="cart-badge" id="cartBadge">0</span>
         </button>
-        <a href="#pricing" class="btn btn-primary">Join Now</a>
-        <div class="hamburger" id="hamburger">
+        <button onclick="openBookingModal()" class="btn btn-primary">Free Trial Pass</button>
+        <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('active')">
           <span></span><span></span><span></span>
         </div>
       </div>
@@ -855,20 +1043,20 @@ footer {
         <h1 class="hero-title">BUILD YOUR <span>LEGACY</span> TODAY</h1>
         <p class="hero-desc">Experience world-class gym facilities, expert personal trainers, and tailored workout programs designed to elevate your athletic performance.</p>
         <div class="hero-btns">
-          <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
+          <button onclick="openBookingModal()" class="btn btn-primary">Book Free Trial</button>
           <a href="#programs" class="btn btn-outline">Explore Programs</a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
-            <h3 class="counter" data-target="5000">0</h3>
+            <h3 class="counter" data-target="5000">5000</h3>
             <p>Active Members</p>
           </div>
           <div class="stat-item">
-            <h3 class="counter" data-target="45">0</h3>
+            <h3 class="counter" data-target="45">45</h3>
             <p>Expert Coaches</p>
           </div>
           <div class="stat-item">
-            <h3 class="counter" data-target="15">0</h3>
+            <h3 class="counter" data-target="15">15</h3>
             <p>Years Experience</p>
           </div>
         </div>
@@ -899,6 +1087,61 @@ footer {
           <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--primary);">24/7 Premium Access</h3>
           <p style="color: var(--text-muted);">Workout on your schedule with keycard access, secure lockers, luxury saunas, and showers.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformations Section (Before/After) -->
+  <section class="section" id="transformations" style="background: rgba(255, 94, 21, 0.03);">
+    <div class="container">
+      <div class="section-title">
+        <h2>MEMBER <span>TRANSFORMATIONS</span></h2>
+        <p>Real results from real APEX PULSE members. Drag the slider to compare!</p>
+      </div>
+      <div class="transformation-slider-container">
+        <div class="img-comp-img">
+          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800" alt="After Transformation">
+          <span style="position:absolute; bottom:15px; right:15px; background:var(--primary); color:#fff; padding:5px 15px; border-radius:15px; font-weight:700;">AFTER (6 Months)</span>
+        </div>
+        <div class="img-comp-img img-comp-overlay" id="compOverlay">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800" alt="Before Transformation">
+          <span style="position:absolute; bottom:15px; left:15px; background:var(--bg-card); color:#fff; padding:5px 15px; border-radius:15px; font-weight:700;">BEFORE</span>
+        </div>
+        <div class="img-comp-slider" id="compSlider">↔</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smart Workout Routine Generator -->
+  <section class="section" id="generator">
+    <div class="container">
+      <div class="section-title">
+        <h2>SMART WORKOUT <span>PLAN GENERATOR</span></h2>
+        <p>Select your goal & level to generate a customized training routine.</p>
+      </div>
+      <div class="plan-generator-box">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+          <div class="form-group">
+            <label>Primary Fitness Goal</label>
+            <select id="genGoal">
+              <option value="muscle">Hypertrophy (Muscle Gain)</option>
+              <option value="fatloss">Fat Loss & Conditioning</option>
+              <option value="strength">Pure Strength & Powerlifting</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Experience Level</label>
+            <select id="genLevel">
+              <option value="beginner">Beginner (1-2 Days/wk)</option>
+              <option value="intermediate" selected>Intermediate (3-4 Days/wk)</option>
+              <option value="advanced">Advanced (5-6 Days/wk)</option>
+            </select>
+          </div>
+          <div style="display: flex; align-items: flex-end; margin-bottom: 20px;">
+            <button class="btn btn-primary" style="width: 100%;" onclick="generateCustomRoutine()">Generate Routine</button>
+          </div>
+        </div>
+        <div id="routineOutput" style="margin-top: 20px;"></div>
       </div>
     </div>
   </section>
@@ -942,12 +1185,12 @@ footer {
     </div>
   </section>
 
-  <!-- Interactive Fitness Tools (Calculators) -->
+  <!-- Interactive Fitness Tools (Calculators & Daily Hydration Tracker) -->
   <section class="section" id="calculators">
     <div class="container">
       <div class="section-title">
         <h2>INTERACTIVE <span>FITNESS TOOLS</span></h2>
-        <p>Calculate your Body Mass Index (BMI) & Daily Calorie goals in seconds.</p>
+        <p>Calculate your Body Mass Index (BMI), Daily Calories, and Track Water Intake.</p>
       </div>
       <div class="calculators-container">
         <!-- BMI Calculator -->
@@ -1038,7 +1281,7 @@ footer {
             <li>✓ Free High-Speed WiFi</li>
             <li>✗ Personal Trainer Coaching</li>
           </ul>
-          <button class="btn btn-outline" style="width: 100%;">Select Basic</button>
+          <button class="btn btn-outline" style="width: 100%;" onclick="openBookingModal('Basic Plan')">Select Basic</button>
         </div>
         <div class="card price-card popular">
           <div class="popular-badge">MOST POPULAR</div>
@@ -1050,7 +1293,7 @@ footer {
             <li>✓ Sauna & Hydromassage Spa</li>
             <li>✓ 1 Free Personal Trainer Session/mo</li>
           </ul>
-          <button class="btn btn-primary" style="width: 100%;">Select Pro</button>
+          <button class="btn btn-primary" style="width: 100%;" onclick="openBookingModal('Pro Fitness Plan')">Select Pro</button>
         </div>
         <div class="card price-card">
           <h3>VIP Elite</h3>
@@ -1061,7 +1304,7 @@ footer {
             <li>✓ Customized Nutrition & Diet Plan</li>
             <li>✓ Guest Pass (Bring 1 Friend Free)</li>
           </ul>
-          <button class="btn btn-outline" style="width: 100%;">Select VIP</button>
+          <button class="btn btn-outline" style="width: 100%;" onclick="openBookingModal('VIP Elite Plan')">Select VIP</button>
         </div>
       </div>
     </div>
@@ -1146,6 +1389,49 @@ footer {
     </div>
   </div>
 
+  <!-- Booking Modal Popup -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeBookingModal()">✕</button>
+      <h2 style="color: var(--primary); margin-bottom: 10px;">Book Free Trial Pass</h2>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">Experience 1-day complimentary gym pass with personal coaching!</p>
+      <form onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label>Selected Plan / Pass</label>
+          <input type="text" id="modalPlanInput" value="1-Day Free VIP Pass" readonly style="background: rgba(255,255,255,0.02);">
+        </div>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" required placeholder="+1 (555) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>Preferred Visit Date</label>
+          <input type="date" required style="color-scheme: dark;">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Live Activity Ticker -->
+  <div class="live-activity-ticker" id="liveTicker">
+    <span style="font-size: 1.2rem;">🔥</span>
+    <div>
+      <div style="font-weight: 700; font-size: 0.9rem;" id="tickerName">Rahul S.</div>
+      <div style="font-size: 0.78rem; color: var(--text-muted);" id="tickerAction">Just booked 1-Day Free Trial Pass</div>
+    </div>
+  </div>
+
+  <!-- Motivation Music Widget -->
+  <div class="music-player-widget" onclick="toggleMotivationAudio()">
+    <button id="musicPlayBtn">▶</button>
+    <span style="font-size: 0.85rem; font-weight: 600;">Workout Beats 🎵</span>
+  </div>
+
   <!-- FAQ Accordion Section -->
   <section class="section" id="faq">
     <div class="container">
@@ -1154,15 +1440,15 @@ footer {
       </div>
       <div class="faq-container">
         <div class="faq-item">
-          <div class="faq-question">What are the gym operating hours? <span>+</span></div>
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">What are the gym operating hours? <span>+</span></div>
           <div class="faq-answer">We are open 24/7 for all Pro & VIP members! Basic membership hours are 5:00 AM - 11:00 PM every day.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">Can I pause or cancel my membership anytime? <span>+</span></div>
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Can I pause or cancel my membership anytime? <span>+</span></div>
           <div class="faq-answer">Yes! You can pause or cancel your subscription anytime with 7 days notice directly from our mobile app or member portal.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">Do you offer free trial passes for new visitors? <span>+</span></div>
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Do you offer free trial passes for new visitors? <span>+</span></div>
           <div class="faq-answer">Yes, we offer a complimentary 1-day pass for all first-time guests to test our facilities and meet our coaches.</div>
         </div>
       </div>
@@ -1248,22 +1534,65 @@ footer {
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/theme.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/hero.js"></script>
-  <script src="js/bmi-calculator.js"></script>
-  <script src="js/calorie-calculator.js"></script>
-  <script src="js/timetable.js"></script>
-  <script src="js/pricing.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/faq.js"></script>
-
+  <!-- Scripts & Interactivity -->
   <script>
+    let cart = [];
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', next);
+    }
+
+    function calculateBMI() {
+      const w = parseFloat(document.getElementById('bmiWeight').value);
+      const h = parseFloat(document.getElementById('bmiHeight').value) / 100;
+      const res = document.getElementById('bmiResult');
+      if (!w || !h || w <= 0 || h <= 0) {
+        res.innerHTML = "<span style='color:#ff4d4d;'>Please enter valid weight & height!</span>";
+        return;
+      }
+      const bmi = (w / (h * h)).toFixed(1);
+      let cat = "";
+      if (bmi < 18.5) cat = "Underweight 🏋️ Gain Strength!";
+      else if (bmi < 24.9) cat = "Normal Weight 💪 Ideal Condition!";
+      else if (bmi < 29.9) cat = "Overweight 🔥 Burn fat with HIIT!";
+      else cat = "Obese 🚀 Start your journey today!";
+      res.innerHTML = `<div class="result-val">${bmi}</div><div>Status: <strong>${cat}</strong></div>`;
+    }
+
+    function calculateCalories() {
+      const w = parseFloat(document.getElementById('calWeight').value) || 70;
+      const g = document.getElementById('calGoal').value;
+      const sex = document.getElementById('calGender').value;
+      let calories = sex === 'male' ? (w * 24 * 1.4) : (w * 22 * 1.4);
+      if (g === 'loss') calories -= 400;
+      if (g === 'gain') calories += 400;
+      document.getElementById('calResult').innerHTML = `<div class="result-val">${Math.round(calories)} kcal/day</div><div>Target Daily Intake for <strong>${g.toUpperCase()}</strong></div>`;
+    }
+
+    function generateCustomRoutine() {
+      const goal = document.getElementById('genGoal').value;
+      const level = document.getElementById('genLevel').value;
+      const out = document.getElementById('routineOutput');
+      let html = `<table class="routine-table"><thead><tr><th>Day</th><th>Target Muscle</th><th>Key Exercises</th><th>Sets & Reps</th></tr></thead><tbody>`;
+      if (goal === 'muscle') {
+        html += `<tr><td>Day 1</td><td>Chest & Triceps</td><td>Barbell Bench Press, Incline Dumbbell Flyes, Dips</td><td>4 Sets x 8-12 Reps</td></tr>`;
+        html += `<tr><td>Day 2</td><td>Back & Biceps</td><td>Deadlifts, Pull-ups, Barbell Rows, Hammer Curls</td><td>4 Sets x 8-10 Reps</td></tr>`;
+        html += `<tr><td>Day 3</td><td>Legs & Shoulders</td><td>Squats, Romanian Deadlifts, Overhead Press</td><td>4 Sets x 10 Reps</td></tr>`;
+      } else {
+        html += `<tr><td>Day 1</td><td>Full Body HIIT</td><td>Burpees, Kettlebell Swings, Mountain Climbers</td><td>4 Rounds x 45s Work</td></tr>`;
+        html += `<tr><td>Day 2</td><td>Cardio & Core</td><td>Rowing Machine, Battle Ropes, Hanging Leg Raises</td><td>30 Mins + 4 Sets</td></tr>`;
+      }
+      html += `</tbody></table>`;
+      out.innerHTML = html;
+    }
+
     function filterPrograms(cat, btn) {
-      document.querySelectorAll('.program-tabs .tab-btn').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('.program-tabs .tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      document.querySelectorAll('.program-card').forEach(function(card) {
+      document.querySelectorAll('.program-card').forEach(card => {
         if (cat === 'all' || card.getAttribute('data-category') === cat) {
           card.style.display = 'block';
         } else {
@@ -1272,15 +1601,111 @@ footer {
       });
     }
 
+    const timetableData = [
+      { time: '06:00 AM - 07:30 AM', title: 'Morning Power HIIT', trainer: 'Alex Rivers', day: 'mon' },
+      { time: '08:00 AM - 09:30 AM', title: 'Power Yoga & Core', trainer: 'Sophia Chen', day: 'mon' },
+      { time: '05:00 PM - 06:30 PM', title: 'Heavy Bodybuilding', trainer: 'Marcus Steel', day: 'tue' },
+      { time: '07:00 PM - 08:30 PM', title: 'CrossFit WOD Blast', trainer: 'Jake Vance', day: 'wed' },
+      { time: '06:00 AM - 07:30 AM', title: 'Olympic Weightlifting', trainer: 'Marcus Steel', day: 'thu' },
+      { time: '05:30 PM - 07:00 PM', title: 'Metabolic Conditioning', trainer: 'Jake Vance', day: 'fri' }
+    ];
+
+    function filterTimetable(day, btn) {
+      if (btn) {
+        document.querySelectorAll('.timetable-filters .tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      const container = document.getElementById('timetableGrid');
+      const filtered = day === 'all' ? timetableData : timetableData.filter(d => d.day === day);
+      container.innerHTML = filtered.map(s => `
+        <div class="slot-card">
+          <div class="slot-time">${s.time}</div>
+          <div class="slot-title">${s.title}</div>
+          <div class="slot-trainer">Trainer: ${s.trainer}</div>
+        </div>
+      `).join('');
+    }
+
+    function togglePricing(isYearly) {
+      document.getElementById('basicPrice').innerHTML = isYearly ? '$290<span>/yr</span>' : '$29<span>/mo</span>';
+      document.getElementById('proPrice').innerHTML = isYearly ? '$590<span>/yr</span>' : '$59<span>/mo</span>';
+      document.getElementById('vipPrice').innerHTML = isYearly ? '$990<span>/yr</span>' : '$99<span>/mo</span>';
+    }
+
+    function addToCart(id, name, price) {
+      cart.push({ id, name, price });
+      document.getElementById('cartBadge').innerText = cart.length;
+      updateCartUI();
+      toggleCartDrawer();
+    }
+
+    function updateCartUI() {
+      const container = document.getElementById('cartItems');
+      if (cart.length === 0) {
+        container.innerHTML = 'No items in cart yet.';
+        document.getElementById('cartTotal').innerText = '$0.00';
+        return;
+      }
+      let total = 0;
+      container.innerHTML = cart.map((item, idx) => {
+        total += item.price;
+        return `<div class="cart-item"><span>${item.name}</span><strong>$${item.price.toFixed(2)}</strong></div>`;
+      }).join('');
+      document.getElementById('cartTotal').innerText = '$' + total.toFixed(2);
+    }
+
     function toggleCartDrawer() {
       document.getElementById('cartDrawer').classList.toggle('active');
     }
 
+    function openBookingModal(planName = '1-Day Free VIP Pass') {
+      document.getElementById('modalPlanInput').value = planName;
+      document.getElementById('bookingModal').classList.add('active');
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.remove('active');
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      alert('🎉 Trial Pass Booked Successfully! We have sent confirmation details to your phone.');
+      closeBookingModal();
+    }
+
     function handleContactSubmit(e) {
       e.preventDefault();
-      alert('Thank you! Your message has been sent successfully. Our team will contact you shortly.');
+      alert('Thank you! Your message has been sent successfully.');
       e.target.reset();
     }
+
+    let isAudioPlaying = false;
+    function toggleMotivationAudio() {
+      const btn = document.getElementById('musicPlayBtn');
+      isAudioPlaying = !isAudioPlaying;
+      btn.innerText = isAudioPlaying ? '⏸' : '▶';
+      alert(isAudioPlaying ? '🎵 Playing Gym Workout Beats!' : '⏸ Music Paused.');
+    }
+
+    // Ticker simulation
+    const tickerActivities = [
+      { name: 'Rahul S.', action: 'Just booked a Free Trial Pass' },
+      { name: 'Ananya P.', action: 'Upgraded to Pro Fitness Yearly Plan' },
+      { name: 'Vikram K.', action: 'Bought Whey Isolate Protein' },
+      { name: 'Amit M.', action: 'Achieved 100kg Bench Press Personal Record!' }
+    ];
+    let tickerIdx = 0;
+    setInterval(() => {
+      tickerIdx = (tickerIdx + 1) % tickerActivities.length;
+      document.getElementById('tickerName').innerText = tickerActivities[tickerIdx].name;
+      document.getElementById('tickerAction').innerText = tickerActivities[tickerIdx].action;
+    }, 4000);
+
+    // Initial load
+    document.addEventListener('DOMContentLoaded', () => {
+      filterTimetable('all');
+      generateCustomRoutine();
+    });
   </script>
 </body>
 </html>
