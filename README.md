@@ -11,3 +11,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: style(nav): fix navbar mobile backdrop-filter fallback for Safari -->
 
 <!-- Update: js(bmi): add category color indicators for BMI gauge -->
+
+<!-- Update: js(calorie): add protein/carbs/fat macro breakdown calculation -->
