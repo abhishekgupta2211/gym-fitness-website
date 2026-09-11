@@ -33,3 +33,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: html(seo): add meta description and OpenGraph tags for social sharing -->
 
 <!-- Update: html(accessibility): add aria-labels to buttons and icon navigation -->
+
+<!-- Update: html(manifest): add web application manifest for PWA installation -->
