@@ -31,3 +31,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: style(faq): rotate plus icon into cross when panel expands -->
 
 <!-- Update: html(seo): add meta description and OpenGraph tags for social sharing -->
+
+<!-- Update: html(accessibility): add aria-labels to buttons and icon navigation -->
