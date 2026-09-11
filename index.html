@@ -1,1 +1,498 @@
-<!DOCTYPE html><html><head><title>APEX PULSE</title></head><body><h1>APEX PULSE GYM</h1></body></html>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APEX PULSE | Premium Gym & Fitness Center</title>
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/programs.css">
+  <link rel="stylesheet" href="css/calculators.css">
+  <link rel="stylesheet" href="css/timetable.css">
+  <link rel="stylesheet" href="css/pricing.css">
+  <link rel="stylesheet" href="css/store.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/trainers.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="notice-bar">
+    🔥 LIMITED TIME: Join today & get 1 Month Free Personal Training + Free Protein Shaker!
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">APEX<span>PULSE</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#calculators">Tools</a></li>
+        <li><a href="#timetable">Timetable</a></li>
+        <li><a href="#pricing">Plans</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#store">Store</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">🌙</button>
+        <button class="cart-icon-btn" onclick="toggleCartDrawer()" title="Shopping Cart">
+          🛒 <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <a href="#pricing" class="btn btn-primary">Join Now</a>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">⚡ Transform Your Body & Mind</div>
+        <h1 class="hero-title">BUILD YOUR <span>LEGACY</span> TODAY</h1>
+        <p class="hero-desc">Experience world-class gym facilities, expert personal trainers, and tailored workout programs designed to elevate your athletic performance.</p>
+        <div class="hero-btns">
+          <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
+          <a href="#programs" class="btn btn-outline">Explore Programs</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3 class="counter" data-target="5000">0</h3>
+            <p>Active Members</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="counter" data-target="45">0</h3>
+            <p>Expert Coaches</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="counter" data-target="15">0</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>WHY CHOOSE <span>APEX PULSE</span></h2>
+        <p>State-of-the-art equipment, certified athletic trainers, and an inspiring fitness community.</p>
+      </div>
+      <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div class="card">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">🏋️‍♂️</div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--primary);">Modern Equipment</h3>
+          <p style="color: var(--text-muted);">Top-tier biomechanical strength machines, Olympic weightlifting platforms, and cardio zones.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">🥇</div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--primary);">Certified Coaches</h3>
+          <p style="color: var(--text-muted);">Personalized 1-on-1 coaching from elite trainers with proven athletic transformation records.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">⏰</div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--primary);">24/7 Premium Access</h3>
+          <p style="color: var(--text-muted);">Workout on your schedule with keycard access, secure lockers, luxury saunas, and showers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section class="section" id="programs">
+    <div class="container">
+      <div class="section-title">
+        <h2>OUR WORKOUT <span>PROGRAMS</span></h2>
+        <p>Tailored training regimens for every fitness objective.</p>
+      </div>
+      <div class="program-tabs">
+        <button class="tab-btn active" onclick="filterPrograms('all', this)">All Programs</button>
+        <button class="tab-btn" onclick="filterPrograms('bodybuilding', this)">Bodybuilding</button>
+        <button class="tab-btn" onclick="filterPrograms('crossfit', this)">CrossFit</button>
+        <button class="tab-btn" onclick="filterPrograms('yoga', this)">Yoga & Wellness</button>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card" data-category="bodybuilding">
+          <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=800" alt="Bodybuilding">
+          <div class="program-overlay">
+            <h3>Hypertrophy & Muscle Build</h3>
+            <p>Heavy lifting regimens guided by professional bodybuilders.</p>
+          </div>
+        </div>
+        <div class="program-card" data-category="crossfit">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800" alt="CrossFit">
+          <div class="program-overlay">
+            <h3>CrossFit & Functional Fitness</h3>
+            <p>High intensity metabolic conditioning for peak stamina and agility.</p>
+          </div>
+        </div>
+        <div class="program-card" data-category="yoga">
+          <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800" alt="Yoga">
+          <div class="program-overlay">
+            <h3>Power Yoga & Flexibility</h3>
+            <p>Mindful mobility training for posture, core strength, and recovery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Fitness Tools (Calculators) -->
+  <section class="section" id="calculators">
+    <div class="container">
+      <div class="section-title">
+        <h2>INTERACTIVE <span>FITNESS TOOLS</span></h2>
+        <p>Calculate your Body Mass Index (BMI) & Daily Calorie goals in seconds.</p>
+      </div>
+      <div class="calculators-container">
+        <!-- BMI Calculator -->
+        <div class="calc-box">
+          <h3>BMI Calculator</h3>
+          <div class="form-group">
+            <label>Weight (kg)</label>
+            <input type="number" id="bmiWeight" placeholder="e.g. 75">
+          </div>
+          <div class="form-group">
+            <label>Height (cm)</label>
+            <input type="number" id="bmiHeight" placeholder="e.g. 178">
+          </div>
+          <button class="btn btn-primary" onclick="calculateBMI()">Calculate BMI</button>
+          <div class="calc-result" id="bmiResult">Enter your weight & height above</div>
+        </div>
+
+        <!-- Calorie & Macro Estimator -->
+        <div class="calc-box">
+          <h3>Calorie & Macro Estimator</h3>
+          <div class="form-group">
+            <label>Fitness Goal</label>
+            <select id="calGoal">
+              <option value="loss">Fat Loss (Deficit)</option>
+              <option value="maintain" selected>Maintain Weight</option>
+              <option value="gain">Muscle Gain (Surplus)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <select id="calGender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Current Weight (kg)</label>
+            <input type="number" id="calWeight" placeholder="e.g. 70">
+          </div>
+          <button class="btn btn-primary" onclick="calculateCalories()">Estimate Daily Calories</button>
+          <div class="calc-result" id="calResult">Select goal & weight above</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Schedule Timetable -->
+  <section class="section" id="timetable">
+    <div class="container">
+      <div class="section-title">
+        <h2>CLASS <span>SCHEDULE</span></h2>
+        <p>Plan your workouts with our filterable weekly schedule.</p>
+      </div>
+      <div class="timetable-filters">
+        <button class="tab-btn active" onclick="filterTimetable('all', this)">All Days</button>
+        <button class="tab-btn" onclick="filterTimetable('mon', this)">Monday</button>
+        <button class="tab-btn" onclick="filterTimetable('tue', this)">Tuesday</button>
+        <button class="tab-btn" onclick="filterTimetable('wed', this)">Wednesday</button>
+        <button class="tab-btn" onclick="filterTimetable('thu', this)">Thursday</button>
+        <button class="tab-btn" onclick="filterTimetable('fri', this)">Friday</button>
+      </div>
+      <div class="time-grid" id="timetableGrid"></div>
+    </div>
+  </section>
+
+  <!-- Membership Plans & Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-title">
+        <h2>MEMBERSHIP <span>PLANS</span></h2>
+        <p>Flexible plans tailored to your fitness journey.</p>
+      </div>
+      <div class="pricing-toggle">
+        <span style="font-weight: 600;">Monthly</span>
+        <label class="switch">
+          <input type="checkbox" id="pricingToggle" onchange="togglePricing(this.checked)">
+          <span class="slider"></span>
+        </label>
+        <span style="font-weight: 600; color: var(--primary);">Yearly (Save 20%)</span>
+      </div>
+      <div class="pricing-grid">
+        <div class="card price-card">
+          <h3>Basic Plan</h3>
+          <div class="price-amount" id="basicPrice">$29<span>/mo</span></div>
+          <ul style="margin: 20px 0; line-height: 2;">
+            <li>✓ Full Gym Floor Access</li>
+            <li>✓ Locker Room & Luxury Showers</li>
+            <li>✓ Free High-Speed WiFi</li>
+            <li>✗ Personal Trainer Coaching</li>
+          </ul>
+          <button class="btn btn-outline" style="width: 100%;">Select Basic</button>
+        </div>
+        <div class="card price-card popular">
+          <div class="popular-badge">MOST POPULAR</div>
+          <h3>Pro Fitness</h3>
+          <div class="price-amount" id="proPrice">$59<span>/mo</span></div>
+          <ul style="margin: 20px 0; line-height: 2;">
+            <li>✓ All Basic Features Included</li>
+            <li>✓ Unlimited Group Workout Classes</li>
+            <li>✓ Sauna & Hydromassage Spa</li>
+            <li>✓ 1 Free Personal Trainer Session/mo</li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%;">Select Pro</button>
+        </div>
+        <div class="card price-card">
+          <h3>VIP Elite</h3>
+          <div class="price-amount" id="vipPrice">$99<span>/mo</span></div>
+          <ul style="margin: 20px 0; line-height: 2;">
+            <li>✓ All Pro Features Included</li>
+            <li>✓ 4 Monthly Personal Training Sessions</li>
+            <li>✓ Customized Nutrition & Diet Plan</li>
+            <li>✓ Guest Pass (Bring 1 Friend Free)</li>
+          </ul>
+          <button class="btn btn-outline" style="width: 100%;">Select VIP</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers Section -->
+  <section class="section" id="trainers">
+    <div class="container">
+      <div class="section-title">
+        <h2>EXPERT <span>TRAINERS</span></h2>
+        <p>Guided by world-class certified fitness coaches.</p>
+      </div>
+      <div class="trainers-grid">
+        <div class="trainer-card">
+          <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=400" alt="Marcus Steel" class="trainer-img">
+          <div class="trainer-info">
+            <h3 style="font-size: 1.3rem;">Marcus Steel</h3>
+            <div class="trainer-role">Head Bodybuilding Coach</div>
+          </div>
+        </div>
+        <div class="trainer-card">
+          <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=400" alt="Sophia Chen" class="trainer-img">
+          <div class="trainer-info">
+            <h3 style="font-size: 1.3rem;">Sophia Chen</h3>
+            <div class="trainer-role">Yoga & Mobility Specialist</div>
+          </div>
+        </div>
+        <div class="trainer-card">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=400" alt="Jake Vance" class="trainer-img">
+          <div class="trainer-info">
+            <h3 style="font-size: 1.3rem;">Jake Vance</h3>
+            <div class="trainer-role">CrossFit Master Trainer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gear & Supplements Store Section -->
+  <section class="section" id="store">
+    <div class="container">
+      <div class="section-title">
+        <h2>OFFICIAL <span>STORE & SUPPLEMENTS</span></h2>
+        <p>Fuel your workouts with certified nutrition & apparel.</p>
+      </div>
+      <div class="store-grid">
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?q=80&w=400" alt="Whey Isolate" class="product-img">
+          <div class="product-title">Whey Isolate Protein 2kg</div>
+          <div class="product-price">$69.99</div>
+          <button class="btn btn-primary" onclick="addToCart(1, 'Whey Isolate Protein 2kg', 69.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1593095940071-007dd245818d?q=80&w=400" alt="Pre-Workout" class="product-img">
+          <div class="product-title">Pre-Workout Energy Blast</div>
+          <div class="product-price">$39.99</div>
+          <button class="btn btn-primary" onclick="addToCart(2, 'Pre-Workout Energy Blast', 39.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=400" alt="Weight Straps" class="product-img">
+          <div class="product-title">Heavy Duty Lifting Straps</div>
+          <div class="product-price">$19.99</div>
+          <button class="btn btn-primary" onclick="addToCart(3, 'Heavy Duty Lifting Straps', 19.99)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Shopping Cart</h3>
+      <button onclick="toggleCartDrawer()" style="background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">No items in cart yet.</div>
+    <div class="cart-footer">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-weight: 700;">
+        <span>Total:</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="checkoutCart()">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- FAQ Accordion Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-title">
+        <h2>FREQUENTLY ASKED <span>QUESTIONS</span></h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">What are the gym operating hours? <span>+</span></div>
+          <div class="faq-answer">We are open 24/7 for all Pro & VIP members! Basic membership hours are 5:00 AM - 11:00 PM every day.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I pause or cancel my membership anytime? <span>+</span></div>
+          <div class="faq-answer">Yes! You can pause or cancel your subscription anytime with 7 days notice directly from our mobile app or member portal.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you offer free trial passes for new visitors? <span>+</span></div>
+          <div class="faq-answer">Yes, we offer a complimentary 1-day pass for all first-time guests to test our facilities and meet our coaches.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>GET IN <span>TOUCH</span></h2>
+        <p>Visit our facility or send us a message.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>123 Fitness Boulevard, Metro City</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (555) 019-2834</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p>support@apexpulse.fit</p>
+            </div>
+          </div>
+        </div>
+        <form id="contactForm" class="calc-box" onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea style="width:100%; padding:12px; background:rgba(255,255,255,0.05); border:1px solid var(--border-color); color:#fff; border-radius:8px;" rows="4" required placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>APEX PULSE</h4>
+          <p>Empowering individuals to unlock their true athletic potential through elite facilities and expert coaching.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Workout Programs</a></li>
+            <li><a href="#pricing">Pricing Plans</a></li>
+            <li><a href="#store">Gear Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Working Hours</h4>
+          <p>Monday - Sunday: 24/7 Access</p>
+          <p>Staffed Hours: 6:00 AM - 10:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 APEX PULSE Gym & Fitness Club. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/bmi-calculator.js"></script>
+  <script src="js/calorie-calculator.js"></script>
+  <script src="js/timetable.js"></script>
+  <script src="js/pricing.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/faq.js"></script>
+
+  <script>
+    function filterPrograms(cat, btn) {
+      document.querySelectorAll('.program-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.program-card').forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleCartDrawer() {
+      document.getElementById('cartDrawer').classList.toggle('active');
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent successfully. Our team will contact you shortly.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
