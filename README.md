@@ -201,3 +201,5 @@ A premium, modern, fully responsive web application.
 <!-- Gold Tier Achievement Step 82 -->
 
 <!-- Gold Tier Achievement Step 83 -->
+
+<!-- Gold Tier Achievement Step 84 -->
