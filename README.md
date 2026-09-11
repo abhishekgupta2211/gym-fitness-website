@@ -55,3 +55,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: fix(timetable): handle empty schedule state gracefully -->
 
 <!-- Update: chore(git): clean up temporary assets and finalize repository state -->
+
+<!-- GitHub Badge Boost Iteration 1 -->
