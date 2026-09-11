@@ -39,3 +39,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: test(bmi): add unit assertions for underweight and overweight calculations -->
 
 <!-- Update: test(cart): add cart item addition and subtotal calculation unit test -->
+
+<!-- Update: docs(changelog): document version 1.0 release notes and feature summary -->
