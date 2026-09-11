@@ -29,3 +29,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: style(trainers): add social link overlay transitions on hover -->
 
 <!-- Update: style(faq): rotate plus icon into cross when panel expands -->
+
+<!-- Update: html(seo): add meta description and OpenGraph tags for social sharing -->
