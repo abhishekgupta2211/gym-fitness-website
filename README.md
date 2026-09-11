@@ -13,3 +13,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: js(bmi): add category color indicators for BMI gauge -->
 
 <!-- Update: js(calorie): add protein/carbs/fat macro breakdown calculation -->
+
+<!-- Update: js(timetable): add morning vs evening class filter option -->
