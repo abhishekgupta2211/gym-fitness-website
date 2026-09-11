@@ -49,3 +49,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: refactor(js): modularize event listener initializations for fast load -->
 
 <!-- Update: perf(images): set lazy loading on secondary section images -->
+
+<!-- Update: fix(contact): add basic email regex validation before form submission -->
