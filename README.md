@@ -21,3 +21,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: js(cart): persist shopping cart contents in localStorage -->
 
 <!-- Update: js(theme): auto-detect system dark mode user preference -->
+
+<!-- Update: style(store): add hover scale animation for merchandise images -->
