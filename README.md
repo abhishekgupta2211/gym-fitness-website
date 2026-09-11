@@ -47,3 +47,5 @@ A premium, modern, fully responsive web application.
 <!-- Update: refactor(css): consolidate color tokens and optimize stylesheet imports -->
 
 <!-- Update: refactor(js): modularize event listener initializations for fast load -->
+
+<!-- Update: perf(images): set lazy loading on secondary section images -->
